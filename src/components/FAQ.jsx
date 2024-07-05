@@ -19,7 +19,7 @@ const FAQ = () => {
         setVisible(!isVisible)
     }
     return (
-        <div className='h-[60vh] w-screen px-32 flex flex-col items-center '>
+        <section id='FAQs' className='h-[60vh] w-screen px-32 flex flex-col items-center '>
             <h1 className='text-4xl font-semibold'>Frequently Asked <span className='text-blue-600'>Questions</span></h1>
             <div className='h-full w-full flex py-16 justify-around'>
                 <div className='flex flex-col w-1/5 gap-8'>
@@ -42,7 +42,7 @@ const FAQ = () => {
                     }
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 export default FAQ

@@ -16,7 +16,7 @@ const Benifits = () => {
                 <img className='h-2' src={downArrow2} alt='' />
             </div>
         </div>
-        <button className='h-12 w-36 bg-blue-600 text-white rounded-lg font-semibold'>Refer Now</button>
+        <button className='h-12 w-36 bg-blue-600 hover:bg-blue-800 text-white rounded-lg font-semibold'>Refer Now</button>
     </section>
   )
 }

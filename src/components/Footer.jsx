@@ -5,14 +5,15 @@ import facebook from '../assets/facebook.svg'
 import linkedin from '../assets/linkedin.svg'
 import twitter from '../assets/twitter.svg'
 import youtube from '../assets/youtube.svg'
+import phone from '../assets/phone.svg'
 import instagram from '../assets/instagram.svg'
 const Footer = () => {
     return (
-        <div className='min-[70vh] w-screen px-56 bg-gray-700 py-8'>
+        <section id='Support' className='min-[70vh] w-screen px-56 bg-gray-700 py-8 relative'>
             <div className='h-32 w-full flex justify-between items-center border-b'>
                 <img className='h-1/3' src={Logo2} alt='' />
                 <div className='h-fit flex flex-col justify-center items-center  text-white'>
-                    <button className='h-12 w-fit px-12 text-base bg-blue-600 border-x border-y border-white rounded-lg font-semibold'>Schedule 1 on 1 Call Now</button>
+                    <button className='h-12 w-fit px-12 text-base bg-blue-600 hover:bg-blue-800 border-x border-y border-white rounded-lg font-semibold'>Schedule 1 on 1 Call Now</button>
                     <p className='text-sm'>Speak with our Learning Advisor</p>
                 </div>
             </div>
@@ -72,8 +73,11 @@ const Footer = () => {
                     </div>  
                 </div>
             </div>
+            <div className='h-[55px] absolute w-fit bottom-10 right-10 cursor-pointer'>
+                <img className='h-full' src={phone} alt='' />
+            </div>
             <p className='py-5 text-center text-base text-white'>© 2024 Accredian A Brand of FullStack Education Pvt Ltd. All Rights Reserved</p>
-        </div>
+        </section>
     )
 }
 

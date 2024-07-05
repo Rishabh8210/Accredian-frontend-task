@@ -1,4 +1,5 @@
 import React from 'react'
+import '../App.css'
 import Logo from '../assets/Logo.png' 
 import downArrow from '../assets/downArrow.svg'
 import mainContainerImg from '../assets/MainContainerImg.png'
@@ -28,8 +29,8 @@ const Home = () => {
                     <li className='cursor-pointer'>Resourses</li>
                     <li className='cursor-pointer'>About Us</li>
                 </ul>
-                <button className='h-12 w-24 bg-slate-300 rounded-lg font-semibold'>Login</button>
-                <button className='h-12 w-36 bg-blue-600 text-white rounded-lg font-semibold'>Try for free</button>
+                <button className='h-12 w-24 bg-slate-300 hover:bg-slate-100 rounded-lg font-semibold'>Login</button>
+                <button className='h-12 w-36  bg-blue-600 hover:bg-blue-800 text-white rounded-lg font-semibold'>Try for free</button>
             </div>
         </div>
         {/* HomeSection */}
@@ -39,16 +40,16 @@ const Home = () => {
                     <p className='text-blue-600'>Refer</p>
                     <span className='absolute -bottom-2 font-extrabold text-blue-600'>.</span>
                 </div>
-                <p>Benifits</p>
-                <p>FAQ's</p>
-                <p>Support</p>
+                <a href='#Benifits'>Benifits</a>
+                <a href='#FAQs'>FAQ's</a>
+                <a href='#Support'>Support</a>
             </div>
             <div className='h-fit w-3/4 bg-blue-50 pl-12 pr-12 pt-16 pb-16 shadow-2xl flex justify-between relative overflow-hidden'>
                 <img className='absolute w-32 -top-10 left-0 rotate-180'src={Widgets} alt=''/>
                 <div className='flex w-1/3  flex-col gap-16'>
                     <h1 className='text-7xl font-semibold'>Let's Learn & Earn</h1>
                     <p className='text-4xl'>Get a chance to win up-to <span className='font-semibold text-blue-600'>Rs. 15,000</span></p>
-                    <button className='h-12 w-36 bg-blue-600 text-white rounded-lg font-semibold'>Refer Now</button>
+                    <button className='h-12 w-36 bg-blue-600 hover:bg-blue-800 text-white rounded-lg font-semibold'>Refer Now</button>
                 </div>
                 <div className='h-fit w-2/3'>
                 <img className='absolute w-32 top-4 right-96 rotate-180'src={Widgets} alt=''/>
