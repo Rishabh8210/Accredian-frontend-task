@@ -7,7 +7,7 @@ const FAQ = () => {
     const handleClick = (event) => {
         const data = event.target.textContent;
         const ques = faqs.find((faq) => {
-            return faq.type == data
+            return faq.type === data
         });
         if (ques) {
             setQuestion(ques);
@@ -19,17 +19,17 @@ const FAQ = () => {
         setVisible(!isVisible)
     }
     return (
-        <section id='FAQs' className='h-[60vh] w-screen px-32 flex flex-col items-center '>
+        <section id='FAQs' className='min-h-[60vh] w-screen lg:px-32 px-7 flex flex-col items-center '>
             <h1 className='text-4xl font-semibold'>Frequently Asked <span className='text-blue-600'>Questions</span></h1>
-            <div className='h-full w-full flex py-16 justify-around'>
-                <div className='flex flex-col w-1/5 gap-8'>
+            <div className='h-full w-full flex flex-col sm:flex-row sm:px-16 py-16 justify-around'>
+                <div className='flex flex-col w-full gap-8 '>
                     {
                         faqs && faqs.map((faq) => {
-                            return <button className='h-fit p-4 w-full border-2 rounded-lg font-semibold hover:shadow-xl hover:text-blue-500' onClick={(event) => handleClick(event)}>{faq?.type}</button>
+                            return <button className='h-fit p-4 w-full sm:w-64 border-2 rounded-lg font-semibold hover:shadow-xl hover:text-blue-500' onClick={(event) => handleClick(event)}>{faq?.type}</button>
                         })
                     }
                 </div>
-                <div className='w-3/5'>
+                <div className='py-10 w-full'>
                     {
                         question && question?.map((ques) => {
                             return (

@@ -4,13 +4,13 @@ import MainContentBenifits from './MainContentBenifits'
 import downArrow2 from '../assets/downArrow2.svg'
 const Benifits = () => {
   return (
-    <section id='Benifits' className='h-screen w-screen pl-32 pr-32 p-10 flex flex-col items-center'>
+    <section id='Benifits' className='min-h-screen w-screen lg:px-32 p-8 flex flex-col items-center'>
         <h1 className='text-4xl font-semibold'>What Are The <span className='text-blue-600'>Referral Benifits?</span></h1>
-        <div className='flex gap-16 py-10'>
+        <div className='flex flex-col lg:flex-row gap-10 py-10'>
             <SidebarCategory />
             <MainContentBenifits />
         </div>
-        <div className='flex px-auto w-full h-fit flex-row-reverse'>
+        <div className='flex w-full h-fit flex-row-reverse pb-7'>
             <div className='flex w-fit items-center px-2 rounded-lg overflow-hidden border-2'>
                 <button className='h-11 w-28  font-semibold text-zinc-500'>Show more</button>
                 <img className='h-2' src={downArrow2} alt='' />

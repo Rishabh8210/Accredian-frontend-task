@@ -9,15 +9,15 @@ import phone from '../assets/phone.svg'
 import instagram from '../assets/instagram.svg'
 const Footer = () => {
     return (
-        <section id='Support' className='min-[70vh] w-screen px-56 bg-gray-700 py-8 relative'>
-            <div className='h-32 w-full flex justify-between items-center border-b'>
-                <img className='h-1/3' src={Logo2} alt='' />
-                <div className='h-fit flex flex-col justify-center items-center  text-white'>
-                    <button className='h-12 w-fit px-12 text-base bg-blue-600 hover:bg-blue-800 border-x border-y border-white rounded-lg font-semibold'>Schedule 1 on 1 Call Now</button>
+        <section id='Support' className='min-[70vh] w-full p-7 lg:px-56 bg-gray-700 relative'>
+            <div className='h-32 w-full flex flex-col sm:flex-row sm:justify-between sm:items-center  gap-5 '>
+                <img className='w-36 sm:h-1/3' src={Logo2} alt='' />
+                <div className='h-fit flex flex-col sm:justify-center sm:items-center  text-white'>
+                    <button className='h-10 w-fit px-5 text-base bg-blue-600 hover:bg-blue-800 border-x border-y border-white rounded-lg font-semibold'>Schedule 1 on 1 Call Now</button>
                     <p className='text-sm'>Speak with our Learning Advisor</p>
                 </div>
             </div>
-            <div className='flex  pt-3 justify-around'>
+            <div className='flex flex-col lg:flex-row pt-3 justify-around'>
                 <div className='h-fit w-80'>
                     <div className='h-fit w-full flex p-5 justify-between '>
                         <h2 className='text-white  text-lg'>PROGRAMS</h2>
@@ -25,7 +25,7 @@ const Footer = () => {
                     <div className='h-fit'>
                         {
                             categories && categories.map((category) => {
-                                return <div className='h-fit  text-white  w-full flex justify-between'><p className='text-base pb-4 px-5 font-semibold cursor-pointer'>{category}</p><span className='text-2xl'>+</span></div>
+                                return <div className='h-fit text-white w-64 flex justify-between'><p className='text-base pb-4 font-semibold cursor-pointer'>{category}</p><span className='text-2xl'>+</span></div>
                             })
                         }
                     </div>
@@ -73,7 +73,7 @@ const Footer = () => {
                     </div>  
                 </div>
             </div>
-            <div className='h-[55px] absolute w-fit bottom-10 right-10 cursor-pointer'>
+            <div className='h-[55px] absolute w-fit bottom-24 right-6 cursor-pointer'>
                 <img className='h-full' src={phone} alt='' />
             </div>
             <p className='py-5 text-center text-base text-white'>© 2024 Accredian A Brand of FullStack Education Pvt Ltd. All Rights Reserved</p>

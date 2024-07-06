@@ -3,9 +3,9 @@ import {programs} from '../constant'
 import scolar from '../assets/scolar.svg'
 const MainContentBenifits = () => {
     return (
-        <div className='h-fit flex rounded-lg overflow-hidden shadow-xl'>
+        <div className='h-fit flex flex-col lg:flex-row rounded-lg overflow-hidden shadow-xl'>
             <div className=''>
-                <h2 className='text-white p-4 text-xl bg-blue-600 cursor-pointer font-semibold'>ALL PROGRAMS</h2>
+                <h2 className='text-white p-4 text-lg bg-blue-600 cursor-pointer font-semibold whitespace-nowrap'>ALL PROGRAMS</h2>
                 <div className='h-fit'>
                     {
                         programs && programs.map((program) => {
@@ -16,7 +16,7 @@ const MainContentBenifits = () => {
             </div>
             <span className='border-x'></span>
             <div>
-                <h2 className='text-white p-4 text-xl bg-blue-600 cursor-pointer uppercase font-semibold'>referrer Bonus</h2>
+                <h2 className='text-white p-4 text-xl bg-blue-600 cursor-pointer uppercase font-semibold whitespace-nowrap'>referrer Bonus</h2>
                 <div className='h-fit'>
                     {
                         programs && programs.map((program) => {
@@ -27,7 +27,7 @@ const MainContentBenifits = () => {
             </div>
             <span className='border-x'></span>
             <div>
-                <h2 className='text-white p-4 text-xl bg-blue-600 uppercase cursor-pointer font-semibold'>referee Bonus</h2>
+                <h2 className='text-white p-4 text-xl bg-blue-600 uppercase cursor-pointer font-semibold whitespace-nowrap'>referee Bonus</h2>
                 <div className='h-fit'>
                     {
                         programs && programs.map((program) => {
