@@ -4,8 +4,8 @@ import Logo from '../assets/Logo.png'
 import downArrow from '../assets/downArrow.svg'
 import mainContainerImg from '../assets/MainContainerImg.png'
 import Widgets from '../assets/Widgets.png'
-import Registration from './Registration'
 import DropdownNav from './DropdownNav'
+import Signin from './Signin'
 const Home = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [isNavOpen, setNavOpen] = useState(false);
@@ -14,7 +14,7 @@ const Home = () => {
     }
     return (
         <section className='min-h-screen'>
-            {isLoggedIn && <Registration triggerRegistration = {isLoggedIn} setTriggerRegistration = {setIsLoggedIn}/>}
+            {isLoggedIn && <Signin trigger = {isLoggedIn} setTrigger = {setIsLoggedIn}/>}
             <header className='h-fit w-full'>
                 <div className='h-fit w-full p-3 bg-blue-100 flex justify-center items-center sm:text-base'>
                     <p className='text-sm'>Navigate your ideal career path with tailored expert advice <span className='sm:pl-5 text-blue-500 text-base font-semibold'>Contact Expert</span></p>
