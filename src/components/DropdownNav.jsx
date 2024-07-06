@@ -5,7 +5,7 @@ const DropdownNav = ({triggerNav, setTriggerNav, triggerRegistration, setTrigger
     }
     return (
         <div className='absolute z-10 top-0 left-0 h-screen w-full flex justify-center items-center bg-zinc-800 bg-opacity-50' onClick={() => setTriggerNav(!triggerNav)}>
-            <div className='min-h-[40vh] w-[80%] bg-blue-100 shadow-lg flex flex-col justify-center items-center rounded-lg p-5'>
+            <div className='min-h-[40vh] w-[80%] bg-white shadow-lg flex flex-col justify-center items-center rounded-lg p-5'>
                 <div className='h-10 w-full px-2 flex justify-between'>
                     <p className='font-semibold text-4xl'>Welcome</p>
                     <button className='h-full w-10 text-base bg-blue-600 hover:bg-blue-800 text-white rounded-lg font-bold' onClick={() => setTriggerNav(!triggerNav)}>X</button>

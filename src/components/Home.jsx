@@ -13,7 +13,7 @@ const Home = () => {
         setNavOpen(!isNavOpen);
     }
     return (
-        <section className='min-h-screen'>
+        <section className='min-h-screen bg-white'>
             {isLoggedIn && <Signin trigger = {isLoggedIn} setTrigger = {setIsLoggedIn}/>}
             <header className='h-fit w-full'>
                 <div className='h-fit w-full p-3 bg-blue-100 flex justify-center items-center sm:text-base'>
