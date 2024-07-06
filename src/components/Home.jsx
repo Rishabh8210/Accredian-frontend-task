@@ -1,12 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../App.css'
 import Logo from '../assets/Logo.png'
 import downArrow from '../assets/downArrow.svg'
 import mainContainerImg from '../assets/MainContainerImg.png'
 import Widgets from '../assets/Widgets.png'
+import Registration from './Registration'
+import DropdownNav from './DropdownNav'
 const Home = () => {
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [isNavOpen, setNavOpen] = useState(false);
+    function handleClick(){
+        setNavOpen(!isNavOpen);
+    }
     return (
         <section className='min-h-screen'>
+            {isLoggedIn && <Registration triggerRegistration = {isLoggedIn} setTriggerRegistration = {setIsLoggedIn}/>}
             <header className='h-fit w-full'>
                 <div className='h-fit w-full p-3 bg-blue-100 flex justify-center items-center sm:text-base'>
                     <p className='text-sm'>Navigate your ideal career path with tailored expert advice <span className='sm:pl-5 text-blue-500 text-base font-semibold'>Contact Expert</span></p>
@@ -27,10 +35,11 @@ const Home = () => {
                                 <li className='cursor-pointer'>Resourses</li>
                                 <li className='cursor-pointer'>About Us</li>
                             </ul>
-                            <button className='h-12 w-20 text-base bg-slate-300 hover:bg-slate-100 rounded-lg font-bold'>Login</button>
+                            <button className='h-12 w-20 text-base bg-slate-300 hover:bg-slate-100 rounded-lg font-bold' onClick={() => setIsLoggedIn(!isLoggedIn)}>Login</button>
                             <button className='h-12 w-28 text-base bg-blue-600 hover:bg-blue-800 text-white rounded-lg font-bold'>Try for free</button>
                         </div>
-                        <p className='text-4xl lg:hidden'>#</p>
+                        <p className='text-4xl cursor-pointer font-semibold lg:hidden' onClick={() => handleClick()}>#</p>
+                        {isNavOpen && <DropdownNav triggerNav = {isNavOpen} setTriggerNav = {setNavOpen} triggerRegistration = {isLoggedIn} setTriggerRegistration = {setIsLoggedIn}/>}
                     </div>
                 </nav>
             </header>
@@ -62,6 +71,7 @@ const Home = () => {
         </section>
     )
 }
+
 
 export default Home
 
