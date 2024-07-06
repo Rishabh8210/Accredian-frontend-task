@@ -19,7 +19,7 @@ const FAQ = () => {
         setVisible(!isVisible)
     }
     return (
-        <section id='FAQs' className='min-h-[60vh] w-screen lg:px-32 px-7 flex flex-col items-center '>
+        <section id='FAQs' className='min-h-[60vh] w-full lg:px-32 px-7 flex flex-col items-center '>
             <h1 className='text-4xl font-semibold'>Frequently Asked <span className='text-blue-600'>Questions</span></h1>
             <div className='h-full w-full flex flex-col sm:flex-row sm:px-16 py-16 justify-around'>
                 <div className='flex flex-col w-full gap-8 '>
