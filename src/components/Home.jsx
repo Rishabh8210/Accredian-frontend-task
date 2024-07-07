@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import '../App.css'
 import Logo from '../assets/Logo.png'
 import downArrow from '../assets/downArrow.svg'
@@ -12,6 +12,16 @@ const Home = () => {
     const {isReferFormOpen, setReferForm} = useContext(ReferContext)
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [isNavOpen, setNavOpen] = useState(false);
+    
+    const [isVisible, setIsVisible] = useState(false);
+    useEffect(() => {
+        const token = localStorage.getItem('token');
+        if(token)
+            setIsVisible(true)
+        else    
+        setIsVisible(false)
+    }, [])
+    
     function handleClick(){
         setNavOpen(!isNavOpen);
     }
@@ -40,7 +50,7 @@ const Home = () => {
                                 <li className='cursor-pointer'>Resourses</li>
                                 <li className='cursor-pointer'>About Us</li>
                             </ul>
-                            <button className='h-12 w-20 text-base bg-slate-300 hover:bg-slate-100 rounded-lg font-bold' onClick={() => setIsLoggedIn(!isLoggedIn)}>Login</button>
+                            {!isVisible && <button className='h-12 w-20 text-base bg-slate-300 hover:bg-slate-100 rounded-lg font-bold' onClick={() => setIsLoggedIn(!isLoggedIn)}>Login</button>}
                             <button className='h-12 w-28 text-base bg-blue-600 hover:bg-blue-800 text-white rounded-lg font-bold'>Try for free</button>
                         </div>
                         <p className='text-4xl cursor-pointer font-semibold lg:hidden' onClick={() => handleClick()}>#</p>
