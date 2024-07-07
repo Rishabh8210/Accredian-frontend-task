@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useFormik } from "formik";
-import { signUpSchema } from "../schemas/index";
+import { referFormSchema } from "../schemas/referForm";
 
 const initialValues = {
     name: "",
@@ -14,7 +14,7 @@ const ReferForm = ({ trigger, setTrigger }) => {
     const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
         useFormik({
             initialValues,
-            validationSchema: signUpSchema,
+            validationSchema: referFormSchema,
             onSubmit: (values, action) => {
                 console.log(
                     "file: Refer.jsx ~ line 11 ~ Registration ~ values",

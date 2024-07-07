@@ -8,16 +8,16 @@ import ReferContainer from './components/ReferContainer'
 import {ReferProvider} from './utils/ReferContext'
 const App = () => {
   return (
-    <ReferProvider>
-      <div className='flex flex-col gap-16'>
-        <Home />
-        <ReferContainer />
-        <Benifits />
-        <FAQ />
-        <GetInTouch />
-        <Footer />
+    <div className='flex flex-col gap-16'>
+        <ReferProvider>
+          <Home />
+          <ReferContainer />
+          <Benifits />
+          <FAQ />
+          <GetInTouch />
+          <Footer />
+        </ReferProvider>
       </div>
-    </ReferProvider>
   )
 }
 

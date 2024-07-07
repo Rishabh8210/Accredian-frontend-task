@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import headset from '../assets/headset.svg'
+import ReferForm from './ReferForm'
+import ReferContext from '../utils/ReferContext'
 const GetInTouch = () => {
+  const { isReferFormOpen, setReferForm } = useContext(ReferContext)
   return (
     <section className='min-h-[20vh] w-full px-7 lg:px-32 flex items-center text-white'>
         <div className='flex flex-col sm:flex-row items-center p-4 sm:px-14 h-full w-full gap-8 rounded-lg bg-blue-500'>
@@ -14,7 +17,7 @@ const GetInTouch = () => {
                 </div>
             </div>
             <div className='h-12 w-36'>
-                <button className='h-full w-full bg-white text-blue-500 hover:text-blue-800 rounded-lg font-semibold'>Refer Now</button>
+                <button className='h-full w-full bg-white text-blue-500 hover:text-blue-800 rounded-lg font-semibold' onClick={() => setReferForm(!isReferFormOpen)}>Refer Now</button>
             </div>
         </div>
     </section>
