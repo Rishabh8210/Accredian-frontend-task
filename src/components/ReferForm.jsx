@@ -75,7 +75,7 @@ const ReferForm = ({ trigger, setTrigger }) => {
 
     } 
     return (
-        <div className='fixed z-15 top-0 left-0 h-screen w-full px-5 flex flex-col justify-center items-center bg-zinc-800 bg-opacity-50'>
+        <div className='fixed z-20 top-0 left-0 h-screen w-full px-5 flex flex-col justify-center items-center bg-zinc-800 bg-opacity-50'>
             <div className='min-h-[60vh] max-h-[90vh] w-full bg-white shadow-lg flex flex-col items-center rounded-lg p-5'>
                 <div className='h-10 w-full px-2 flex justify-between'>
                     <p className='font-semibold text-4xl border-b-4 border-blue-600'>Refer To !</p>
