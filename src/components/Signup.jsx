@@ -1,5 +1,5 @@
 import React from "react";
-
+import axios from 'axios'
 import { useFormik } from "formik";
 import { signUpSchema } from "../schemas/SigninSignup";
 
@@ -15,7 +15,7 @@ const Signup = ({ trigger, setTrigger }) => {
         useFormik({
             initialValues,
             validationSchema: signUpSchema,
-            onSubmit: (values, action) => {
+            onSubmit: async (values, action) => {
                 console.log(
                     "file: Registration.jsx ~ line 11 ~ Registration ~ values",
                     values
@@ -27,6 +27,22 @@ const Signup = ({ trigger, setTrigger }) => {
         "file: Registration.jsx ~ line 25 ~ Registration ~ errors",
         errors
     );
+    async function handleForm(event){
+        event.preventDefault();
+        try {
+            const data = {
+                name: values.name,
+                email: values.email,
+                password: values.password
+            }
+            console.log(data)
+            const response = await axios.post('http://localhost:3000/api/v1/user/signup', data);
+            console.log('Response from server:', response.data);
+            window.location = '/';
+        } catch (error) {
+            console.error('Error registering user:', error);
+        }
+    }
     return (
         <div className='fixed z-10 top-0 left-0 h-screen w-full px-5 flex flex-col justify-center items-center bg-zinc-800 bg-opacity-50'>
             <div className='min-h-[60vh] max-h-[90vh] w-full bg-white shadow-lg flex flex-col items-center rounded-lg p-5'>
@@ -35,7 +51,7 @@ const Signup = ({ trigger, setTrigger }) => {
                     <button className='h-full w-10 text-base bg-blue-600 hover:bg-blue-800 text-white rounded-lg font-bold' onClick={() => setTrigger(!trigger)}>X</button>
                 </div>
                 <div className="w-full py-7">
-                    <form>
+                    <form onSubmit={(event) => handleForm(event)}>
                         <div className="flex flex-col py-1 px-2 border-x border-y border-black border-opacity-30 rounded-md transition-all mb-5 focus-within:border-blue-600 focus-within:border-opacity-100">
                             <label htmlFor="name" className="text-[10px] uppercase font-bold tracking-widest transition-all">
                                 Name

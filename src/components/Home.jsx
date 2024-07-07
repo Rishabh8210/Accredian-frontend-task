@@ -10,7 +10,6 @@ import ReferContext from '../utils/ReferContext'
 import ReferForm from './ReferForm'
 const Home = () => {
     const {isReferFormOpen, setReferForm} = useContext(ReferContext)
-    console.log(isReferFormOpen)
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [isNavOpen, setNavOpen] = useState(false);
     function handleClick(){

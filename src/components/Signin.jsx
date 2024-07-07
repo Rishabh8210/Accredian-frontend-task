@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import axios from 'axios'
 import { useFormik } from "formik";
 import { signUpSchema } from "../schemas/SigninSignup";
 import Signup from "./Signup";
@@ -16,11 +16,12 @@ const Signin = ({ trigger, setTrigger }) => {
         useFormik({
             initialValues,
             validationSchema: signUpSchema,
-            onSubmit: (values, action) => {
+            onSubmit: async(values, action) => {
                 console.log(
                     "file: Registration.jsx ~ line 11 ~ Registration ~ values",
                     values
                 );
+                console.log("hiii")
                 action.resetForm();
             },
         });
@@ -28,6 +29,26 @@ const Signin = ({ trigger, setTrigger }) => {
         "file: Registration.jsx ~ line 25 ~ Registration ~ errors",
         errors
     );
+
+
+    async function handleForm(event){
+        event.preventDefault();
+        try {
+            const data = {
+                email: values.email,
+                password: values.password
+            }
+            console.log(data)
+            const response = await axios.post('http://localhost:3000/api/v1/user/signin', data);
+            localStorage.setItem('token', response.data.token);
+            localStorage.setItem('name', response.data.name);
+            // console.log('Response from server:', response.data.data.name);
+            window.location = '/dashboard';
+        } catch (error) {
+            window.location = '/';
+            console.error('Error registering user:', error);
+        }
+    }
 
     const [isSignUpOpen, setSignUpOpen] = useState(false)
     function clickEvent(event){
@@ -45,7 +66,7 @@ const Signin = ({ trigger, setTrigger }) => {
                     <button className='h-full w-10 text-base bg-blue-600 hover:bg-blue-800 text-white rounded-lg font-bold' onClick={() => setTrigger(!trigger)}>X</button>
                 </div>
                 <div className="w-full py-7">
-                    <form>
+                    <form onSubmit={(event) => handleForm(event)}>
                         <div className="flex flex-col py-1 px-2 border-x border-y border-black border-opacity-30 rounded-md transition-all mb-5 focus-within:border-blue-600 focus-within:border-opacity-100">
                             <label htmlFor="email" className="text-[10px] uppercase font-bold tracking-widest transition-all">
                                 Email
