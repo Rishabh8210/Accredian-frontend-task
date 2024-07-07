@@ -37,11 +37,11 @@ const ReferForm = ({ trigger, setTrigger }) => {
                 <div className="w-full py-7">
                     <form>
                         <div className="flex flex-col py-1 px-2 border-x border-y border-black border-opacity-30 rounded-md transition-all mb-5 focus-within:border-blue-600 focus-within:border-opacity-100">
-                            <label htmlFor="name" className="text-[10px] uppercase font-semibold transition-all">
+                            <label htmlFor="name" className="text-[10px] uppercase font-bold tracking-widest">
                                 Name
                             </label>
                             <input
-                                className="px-0 outline-0 pl-2 text-base placeholder:text-black placeholder:opacity: 1"
+                                className="px-0 outline-0 pl-2 text-base placeholder:text-black placeholder:text-opacity-50 focus-within:outline-none"
                                 type="name"
                                 autoComplete="off"
                                 name="name"
@@ -56,11 +56,11 @@ const ReferForm = ({ trigger, setTrigger }) => {
                             ) : null}
                         </div>
                         <div className="flex flex-col py-1 px-2 border-x border-y border-black border-opacity-30 rounded-md transition-all mb-5 focus-within:border-blue-600 focus-within:border-opacity-100">
-                            <label htmlFor="email" className="text-[10px] uppercase font-semibold transition-all">
+                            <label htmlFor="email" className="text-[10px] uppercase font-bold tracking-widest">
                                 To email
                             </label>
                             <input
-                                className="px-0 outline-0 pl-2 text-base placeholder:text-black placeholder:opacity: 1"
+                                className="px-0 outline-0 pl-2 text-base placeholder:text-black placeholder:text-opacity-50 focus-within:outline-none"
                                 type="email"
                                 autoComplete="off"
                                 name="email"
@@ -75,11 +75,11 @@ const ReferForm = ({ trigger, setTrigger }) => {
                             ) : null}
                         </div>
                         <div className="flex flex-col py-1 px-2 border-x border-y border-black border-opacity-30 rounded-md transition-all mb-5 focus-within:border-blue-600 focus-within:border-opacity-100">
-                            <label htmlFor="course" className="text-[10px] uppercase font-semibold transition-all">
+                            <label htmlFor="course" className="text-[10px] uppercase font-bold tracking-widest">
                                 Course
                             </label>
                             <input
-                                className="px-0 outline-0 pl-2 text-base placeholder:text-black placeholder:opacity: 1"
+                                className="px-0 outline-0 pl-2 text-base placeholder:text-black placeholder:text-opacity-50 focus-within:outline-none"
                                 type="text"
                                 autoComplete="off"
                                 name="course"
@@ -94,11 +94,11 @@ const ReferForm = ({ trigger, setTrigger }) => {
                             ) : null}
                         </div>
                         <div className="flex flex-col py-1 px-2 border-x border-y border-black border-opacity-30 rounded-md transition-all mb-5 focus-within:border-blue-600 focus-within:border-opacity-100">
-                            <label htmlFor="description" className="text-[10px] uppercase font-semibold transition-all">
+                            <label htmlFor="description" className="text-[10px] uppercase font-bold tracking-widest">
                                 Description
                             </label>
                             <input
-                                className="px-0 outline-0 pl-2 text-base placeholder:text-black placeholder:opacity: 1"
+                                className="px-0 outline-0 pl-2 text-base placeholder:text-black placeholder:text-opacity-50 focus-within:outline-none"
                                 type="text"
                                 autoComplete="off"
                                 name="description"
