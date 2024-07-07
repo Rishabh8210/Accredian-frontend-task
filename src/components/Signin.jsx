@@ -46,12 +46,12 @@ const Signin = ({ trigger, setTrigger }) => {
                 </div>
                 <div className="w-full py-7">
                     <form>
-                        <div className="flex flex-col py-1 px-2 border-x border-y border-black border-opacity-50 rounded-md transition-all mb-5 focus-within:border-blue-600 focus-within:border-opacity-100">
+                        <div className="flex flex-col py-1 px-2 border-x border-y border-black border-opacity-30 rounded-md transition-all mb-5 focus-within:border-blue-600 focus-within:border-opacity-100">
                             <label htmlFor="email" className="text-[10px] uppercase font-semibold transition-all">
                                 Email
                             </label>
                             <input
-                                className="px-0 outline-0 pl-2 text-base placeholder:text-black placeholder:opacity: 1"
+                                className="px-0 outline-0 pl-2 text-base placeholder:text-black placeholder:opacity: 1 focus-within:outline-none"
                                 type="email"
                                 autoComplete="off"
                                 name="email"
@@ -65,7 +65,7 @@ const Signin = ({ trigger, setTrigger }) => {
                                 <p className="text-xs text-red-600">{errors.email}</p>
                             ) : null}
                         </div>
-                        <div className="flex flex-col py-1 px-2 border-x border-y border-black border-opacity-50 rounded-md transition-all mb-5 focus-within:border-blue-600 focus-within:border-opacity-100">
+                        <div className="flex flex-col py-1 px-2 border-x border-y border-black border-opacity-30 rounded-md transition-all mb-5 focus-within:border-blue-600 focus-within:border-opacity-100">
                             <label htmlFor="password" className="text-[10px] uppercase font-semibold transition-all">
                                 Password
                             </label>

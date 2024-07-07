@@ -36,7 +36,7 @@ const ReferForm = ({ trigger, setTrigger }) => {
                 </div>
                 <div className="w-full py-7">
                     <form>
-                        <div className="flex flex-col py-1 px-2 border-x border-y border-black border-opacity-50 rounded-md transition-all mb-5 focus-within:border-blue-600 focus-within:border-opacity-100">
+                        <div className="flex flex-col py-1 px-2 border-x border-y border-black border-opacity-30 rounded-md transition-all mb-5 focus-within:border-blue-600 focus-within:border-opacity-100">
                             <label htmlFor="name" className="text-[10px] uppercase font-semibold transition-all">
                                 Name
                             </label>
@@ -55,7 +55,7 @@ const ReferForm = ({ trigger, setTrigger }) => {
                                 <p className="text-xs text-red-600">{errors.name}</p>
                             ) : null}
                         </div>
-                        <div className="flex flex-col py-1 px-2 border-x border-y border-black border-opacity-50 rounded-md transition-all mb-5 focus-within:border-blue-600 focus-within:border-opacity-100">
+                        <div className="flex flex-col py-1 px-2 border-x border-y border-black border-opacity-30 rounded-md transition-all mb-5 focus-within:border-blue-600 focus-within:border-opacity-100">
                             <label htmlFor="email" className="text-[10px] uppercase font-semibold transition-all">
                                 To email
                             </label>
@@ -74,7 +74,7 @@ const ReferForm = ({ trigger, setTrigger }) => {
                                 <p className="text-xs text-red-600">{errors.email}</p>
                             ) : null}
                         </div>
-                        <div className="flex flex-col py-1 px-2 border-x border-y border-black border-opacity-50 rounded-md transition-all mb-5 focus-within:border-blue-600 focus-within:border-opacity-100">
+                        <div className="flex flex-col py-1 px-2 border-x border-y border-black border-opacity-30 rounded-md transition-all mb-5 focus-within:border-blue-600 focus-within:border-opacity-100">
                             <label htmlFor="course" className="text-[10px] uppercase font-semibold transition-all">
                                 Course
                             </label>
@@ -93,7 +93,7 @@ const ReferForm = ({ trigger, setTrigger }) => {
                                  <p className="text-xs text-red-600">{errors.course}</p>
                             ) : null}
                         </div>
-                        <div className="flex flex-col py-1 px-2 border-x border-y border-black border-opacity-50 rounded-md transition-all mb-5 focus-within:border-blue-600 focus-within:border-opacity-100">
+                        <div className="flex flex-col py-1 px-2 border-x border-y border-black border-opacity-30 rounded-md transition-all mb-5 focus-within:border-blue-600 focus-within:border-opacity-100">
                             <label htmlFor="description" className="text-[10px] uppercase font-semibold transition-all">
                                 Description
                             </label>

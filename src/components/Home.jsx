@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import '../App.css'
 import Logo from '../assets/Logo.png'
 import downArrow from '../assets/downArrow.svg'
@@ -6,12 +6,17 @@ import mainContainerImg from '../assets/MainContainerImg.png'
 import Widgets from '../assets/Widgets.png'
 import DropdownNav from './DropdownNav'
 import Signin from './Signin'
+import ReferContext from '../utils/ReferContext'
+import ReferForm from './ReferForm'
 const Home = () => {
+    const {isReferFormOpen, setReferForm} = useContext(ReferContext)
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [isNavOpen, setNavOpen] = useState(false);
     function handleClick(){
         setNavOpen(!isNavOpen);
     }
+    if(isReferFormOpen)
+        return <ReferForm trigger={isReferFormOpen} setTrigger={setReferForm}/>
     return (
         <section className='min-h-screen bg-white'>
             {isLoggedIn && <Signin trigger = {isLoggedIn} setTrigger = {setIsLoggedIn}/>}
@@ -57,7 +62,7 @@ const Home = () => {
                     <div className='flex w-full lg:w-[30%] text-center flex-col justify-center items-center md:items-start gap-10 shrink-0'>
                         <h1 className='text-6xl sm:text-7xl font-semibold md:text-left'>Let's Learn & Earn</h1>
                         <p className='text-3xl sm:text-4xl md:text-left'>Get a chance to win up-to <span className='font-semibold text-blue-600'>Rs. 15,000</span></p>
-                        <button className='h-12 w-36 bg-blue-600 hover:bg-blue-800 text-white rounded-lg font-semibold'>Refer Now</button>
+                        <button className='h-12 w-36 bg-blue-600 hover:bg-blue-800 text-white rounded-lg font-semibold' onClick={()=> setReferForm(!isReferFormOpen)}>Refer Now</button>
                     </div>
                     <div className='hidden sm:h-[50vh] sm:w-full lg:w-[60%]  sm:flex w-full flex-col justify-center items-center sm:overflow-hidden sm:relative shrink-0 flex-wrap'>
                         <img className='absolute w-32 -top-10 rotate-180' src={Widgets} alt='' />
